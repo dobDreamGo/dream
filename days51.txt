@@ -1,0 +1,88 @@
+Maven
+
+	http://mvnrepository.com/
+	1.	是一个软件项目管理的综合性工具，基于pom的概念，可以使用本地仓库构建，测试整个项目
+
+	2.	maven的命令
+		mvn -v
+		mvn compile
+		mvn test-compile
+		mvn test
+
+		可以将maven添加到path中（MAVEN_HOME后面没有分号，没有bin）
+
+		a.	手动设置maven
+
+		设置setting.xml文件中的<localRepository>节点
+			将该节点的内容设置成自己本地的仓库路径
+
+		可以在其他路径下设置一个仓库路径（d:\m2\repository）
+			
+		b.	eclipse(sts)下设置maven
+		在preferen下找到maven节点
+			1.	找到installations，添加maven的路径
+			2.	user setting设置globle setting，user setting， local repository
+
+	3.	手动创建maven java项目和web项目
+	4.	使用eclipse创建maven的java项目和web项目
+
+使用Maven控制mybatis框架来实现数据的crud操作
+
+	1.	在pom文件中添加mybatis的支持依赖
+		
+		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+		<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>3.4.4</version>
+		</dependency>
+	2.	在pom文件中添加mysql的驱动依赖
+
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.38</version>
+		</dependency>
+
+	3.	在项目的resources目录下创建mybatis的config文件,设置了driver，url，user，pass和mapper
+
+		<?xml version="1.0" encoding="UTF-8" ?>
+		<!DOCTYPE configuration
+		  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+		  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+		<configuration>
+		  <environments default="development">
+		    <environment id="development">
+		      <transactionManager type="JDBC"/>
+		      <dataSource type="POOLED">
+			<property name="driver" value="com.mysql.jdbc.Driver"/>
+			<property name="url" value="jdbc:mysql://localhost:3306/je1705"/>
+			<property name="username" value="james"/>
+			<property name="password" value="1234"/>
+		      </dataSource>
+		    </environment>
+		  </environments>
+		  <mappers>
+		    <mapper resource="com/qfedu/pojo/user-mapper.xml"/>
+		  </mappers>
+		</configuration>
+
+	4.	在src下创建pojo的package，分别放置User的pojo和user-mapper的配置文件,注意namespace和id构成唯一的一个具体的请求
+
+		<?xml version="1.0" encoding="UTF-8" ?>
+		<!DOCTYPE mapper
+		  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+		  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+		<mapper namespace="com.qfedu.pojo.UserMapper">
+		  <select id="getAllUser" resultType="com.qfedu.pojo.User">
+		    select * from tbl_user
+		  </select>
+		</mapper>
+
+	5.	java代码方面
+		SqlSessionFactoryBuilder
+		SqlSessionFactory
+		SqlSession,交给用户可以实现数据的crud操作
+
+		session.selectList("user-mapper中的namespace+id");得到resultType（com.qfedu.pojo.User）的List集合
