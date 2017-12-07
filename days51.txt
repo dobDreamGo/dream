@@ -1,34 +1,34 @@
-ooooooooooooooooooooooMaven
+1121323232ooooooooooooooooooooooMaven
 
 	http://mvnrepository.com/
-	1.	ÊÇÒ»¸öÈí¼şÏîÄ¿¹ÜÀíµÄ×ÛºÏĞÔ¹¤¾ß£¬»ùÓÚpomµÄ¸ÅÄî£¬¿ÉÒÔÊ¹ÓÃ±¾µØ²Ö¿â¹¹½¨£¬²âÊÔÕû¸öÏîÄ¿
+	1.	æ˜¯ä¸€ä¸ªè½¯ä»¶é¡¹ç›®ç®¡ç†çš„ç»¼åˆæ€§å·¥å…·ï¼ŒåŸºäºpomçš„æ¦‚å¿µï¼Œå¯ä»¥ä½¿ç”¨æœ¬åœ°ä»“åº“æ„å»ºï¼Œæµ‹è¯•æ•´ä¸ªé¡¹ç›®
 
-	2.	mavenµÄÃüÁî
+	2.	mavençš„å‘½ä»¤
 		mvn -v
 		mvn compile
 		mvn test-compile
 		mvn test
 
-		¿ÉÒÔ½«mavenÌí¼Óµ½pathÖĞ£¨MAVEN_HOMEºóÃæÃ»ÓĞ·ÖºÅ£¬Ã»ÓĞbin£©
+		å¯ä»¥å°†mavenæ·»åŠ åˆ°pathä¸­ï¼ˆMAVEN_HOMEåé¢æ²¡æœ‰åˆ†å·ï¼Œæ²¡æœ‰binï¼‰
 
-		a.	ÊÖ¶¯ÉèÖÃmaven
+		a.	æ‰‹åŠ¨è®¾ç½®maven
 
-		ÉèÖÃsetting.xmlÎÄ¼şÖĞµÄ<localRepository>½Úµã
-			½«¸Ã½ÚµãµÄÄÚÈİÉèÖÃ³É×Ô¼º±¾µØµÄ²Ö¿âÂ·¾¶
+		è®¾ç½®setting.xmlæ–‡ä»¶ä¸­çš„<localRepository>èŠ‚ç‚¹
+			å°†è¯¥èŠ‚ç‚¹çš„å†…å®¹è®¾ç½®æˆè‡ªå·±æœ¬åœ°çš„ä»“åº“è·¯å¾„
 
-		¿ÉÒÔÔÚÆäËûÂ·¾¶ÏÂÉèÖÃÒ»¸ö²Ö¿âÂ·¾¶£¨d:\m2\repository£©
+		å¯ä»¥åœ¨å…¶ä»–è·¯å¾„ä¸‹è®¾ç½®ä¸€ä¸ªä»“åº“è·¯å¾„ï¼ˆd:\m2\repositoryï¼‰
 			
-		b.	eclipse(sts)ÏÂÉèÖÃmaven
-		ÔÚpreferenÏÂÕÒµ½maven½Úµã
-			1.	ÕÒµ½installations£¬Ìí¼ÓmavenµÄÂ·¾¶
-			2.	user settingÉèÖÃgloble setting£¬user setting£¬ local repository
+		b.	eclipse(sts)ä¸‹è®¾ç½®maven
+		åœ¨preferenä¸‹æ‰¾åˆ°mavenèŠ‚ç‚¹
+			1.	æ‰¾åˆ°installationsï¼Œæ·»åŠ mavençš„è·¯å¾„
+			2.	user settingè®¾ç½®globle settingï¼Œuser settingï¼Œ local repository
 
-	3.	ÊÖ¶¯´´½¨maven javaÏîÄ¿ºÍwebÏîÄ¿
-	4.	Ê¹ÓÃeclipse´´½¨mavenµÄjavaÏîÄ¿ºÍwebÏîÄ¿
+	3.	æ‰‹åŠ¨åˆ›å»ºmaven javaé¡¹ç›®å’Œwebé¡¹ç›®
+	4.	ä½¿ç”¨eclipseåˆ›å»ºmavençš„javaé¡¹ç›®å’Œwebé¡¹ç›®
 
-Ê¹ÓÃMaven¿ØÖÆmybatis¿ò¼ÜÀ´ÊµÏÖÊı¾İµÄcrud²Ù×÷
+ä½¿ç”¨Mavenæ§åˆ¶mybatisæ¡†æ¶æ¥å®ç°æ•°æ®çš„crudæ“ä½œ
 
-	1.	ÔÚpomÎÄ¼şÖĞÌí¼ÓmybatisµÄÖ§³ÖÒÀÀµ
+	1.	åœ¨pomæ–‡ä»¶ä¸­æ·»åŠ mybatisçš„æ”¯æŒä¾èµ–
 		
 		<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
 		<dependency>
@@ -36,7 +36,7 @@ ooooooooooooooooooooooMaven
 			<artifactId>mybatis</artifactId>
 			<version>3.4.4</version>
 		</dependency>
-	2.	ÔÚpomÎÄ¼şÖĞÌí¼ÓmysqlµÄÇı¶¯ÒÀÀµ
+	2.	åœ¨pomæ–‡ä»¶ä¸­æ·»åŠ mysqlçš„é©±åŠ¨ä¾èµ–
 
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 		<dependency>
@@ -45,7 +45,7 @@ ooooooooooooooooooooooMaven
 			<version>5.1.38</version>
 		</dependency>
 
-	3.	ÔÚÏîÄ¿µÄresourcesÄ¿Â¼ÏÂ´´½¨mybatisµÄconfigÎÄ¼ş,ÉèÖÃÁËdriver£¬url£¬user£¬passºÍmapper
+	3.	åœ¨é¡¹ç›®çš„resourcesç›®å½•ä¸‹åˆ›å»ºmybatisçš„configæ–‡ä»¶,è®¾ç½®äº†driverï¼Œurlï¼Œuserï¼Œpasså’Œmapper
 
 		<?xml version="1.0" encoding="UTF-8" ?>
 		<!DOCTYPE configuration
@@ -68,7 +68,7 @@ ooooooooooooooooooooooMaven
 		  </mappers>
 		</configuration>
 
-	4.	ÔÚsrcÏÂ´´½¨pojoµÄpackage£¬·Ö±ğ·ÅÖÃUserµÄpojoºÍuser-mapperµÄÅäÖÃÎÄ¼ş,×¢ÒânamespaceºÍid¹¹³ÉÎ¨Ò»µÄÒ»¸ö¾ßÌåµÄÇëÇó
+	4.	åœ¨srcä¸‹åˆ›å»ºpojoçš„packageï¼Œåˆ†åˆ«æ”¾ç½®Userçš„pojoå’Œuser-mapperçš„é…ç½®æ–‡ä»¶,æ³¨æ„namespaceå’Œidæ„æˆå”¯ä¸€çš„ä¸€ä¸ªå…·ä½“çš„è¯·æ±‚
 
 		<?xml version="1.0" encoding="UTF-8" ?>
 		<!DOCTYPE mapper
@@ -80,9 +80,9 @@ ooooooooooooooooooooooMaven
 		  </select>
 		</mapper>
 
-	5.	java´úÂë·½Ãæ
+	5.	javaä»£ç æ–¹é¢
 		SqlSessionFactoryBuilder
 		SqlSessionFactory
-		SqlSession,½»¸øÓÃ»§¿ÉÒÔÊµÏÖÊı¾İµÄcrud²Ù×÷
+		SqlSession,äº¤ç»™ç”¨æˆ·å¯ä»¥å®ç°æ•°æ®çš„crudæ“ä½œ
 
-		session.selectList("user-mapperÖĞµÄnamespace+id");µÃµ½resultType£¨com.qfedu.pojo.User£©µÄList¼¯ºÏ
+		session.selectList("user-mapperä¸­çš„namespace+id");å¾—åˆ°resultTypeï¼ˆcom.qfedu.pojo.Userï¼‰çš„Listé›†åˆ
